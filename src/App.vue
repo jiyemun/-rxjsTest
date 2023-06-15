@@ -1,11 +1,9 @@
 <template>
-  <div>test</div>
+  <div id="test">0</div>
 </template>
 
 <script lang="ts" setup>
-import { subscribe } from "./example/ex2";
-
-subscribe();
+import { observable } from "./example/ex4";
 </script>
 
 <style scoped></style>
