@@ -29,17 +29,19 @@ function appendResults(result: any, container: any) {
   container.appendChild(li);
 }
 
-fromEvent(searchBox, "keyup")
-  .pipe(
-    debounceTime(1000),
-    pluck("target", "value"),
-    filter(noEmpty),
-    map((query) => sendRequest(testData, query))
-  )
-  .forEach((result) => {
-    clearResults(result);
-    appendResults(result, results);
-  });
+if (searchBox) {
+  fromEvent(searchBox, "keyup")
+    .pipe(
+      debounceTime(1000),
+      pluck("target", "value"),
+      filter(noEmpty),
+      map((query) => sendRequest(testData, query))
+    )
+    .forEach((result) => {
+      clearResults(result);
+      appendResults(result, results);
+    });
+}
 
 const clicks = fromEvent(document, "click");
 const tagNames = clicks.pipe(pluck("target", "tagName"));
