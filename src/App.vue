@@ -43,6 +43,7 @@ import {
 } from "ant-design-vue";
 import Home from "./components/Home.vue";
 import Example22 from "./components/Example22.vue";
+import Example23 from "./components/Example23.vue";
 
 const selectedKeys = ref<number[]>([0]);
 
@@ -54,6 +55,10 @@ const menu = [
   {
     title: "ex22",
     component: Example22,
+  },
+  {
+    title: "ex23",
+    component: Example23,
   },
 ];
 </script>
