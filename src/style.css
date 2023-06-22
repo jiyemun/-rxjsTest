@@ -78,3 +78,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected, .ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover{
+  background-color: #ee1391 !important;
+}
